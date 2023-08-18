@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <title>Shape</title>
+  </head>
+  <body>
+    <div class="title">
+      <h1>Make your Shape!</h1>
+    </div>
+    <div class="container">
+      <div class="left">
+        <div class="shapeoption">
+          <div class="col-4">
+            <label for="shape">Select shape :</label>
+          </div>
+          <div class="col-8">
+            <select id="shapeselector">
+              <option value="circle">circle</option>
+              <option value="square">Square</option>
+              <option value="triangle">Triangle</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <label for="color">Select  color :</label>
+          </div>
+          <div class="col-8">
+            <select id="colorselector">
+              <option value="red">Red</option>
+              <option value="yellow">Yellow</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+            </select>
+          </div>
+        </div>
+        <div class="groupbtn">
+          <button id="generateBtn">Generate</button>
+          <button id="clearBtn">Clear</button>
+        </div>
+      </div>
+      <div class="right">
+        <div class="select-shape" id="shapeContainer">
+          The selected shape will appear here
+        </div>
+      </div>
+    </div>
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>
