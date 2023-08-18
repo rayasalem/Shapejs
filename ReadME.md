@@ -1,6 +1,6 @@
 # Shape Display
 
-A simple website that allows users to select a shape and its color, and then displays the selected shape with the chosen color.
+A simple web application that allows users to select a shape and its color, and then displays the selected shape with the chosen color.
 
 ## Table of Contents
 
