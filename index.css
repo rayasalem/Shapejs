@@ -1,5 +1,5 @@
 body {
-  background-image: url("R.jpg");
+  background-image: url("background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -17,7 +17,7 @@ body {
   padding: 10px;
   width: 60vw;
   display: flex;
-  background-color: #bbbbbb;
+  background-color: #9a9a9a;
   border-radius: 30px;
   gap: 20px;
 }
@@ -35,13 +35,13 @@ body {
   height: 25vw;
   max-width: 400px;
   top: 0;
-  background-color: #9a9a9a;
+  background-color: #bbbbbb;
   font-style: italic;
   font-size: large;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: antiquewhite;
+  color:black;
 }
 .title {
   margin-bottom: 450px;
