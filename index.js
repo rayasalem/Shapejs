@@ -11,25 +11,18 @@ generateBtn.addEventListener("click", function () {
   newShape.className = "shape";
 
   if (selectedShape === "circle") {
-    newShape.style.borderRadius = "50%";
+    createCircle(newShape);
   } else if (selectedShape === "square") {
-    newShape.style.width = "100px";
-    newShape.style.height = "100px";
-    newShape.style.borderRadius = "0";
-  } else if (selectedShape === "triangle") {
-    newShape.style.width="0";
-    newShape.style.height="0";
-    newShape.style.borderLeft = "50px solid transparent";
-    newShape.style.borderRight = "50px solid transparent";
-    newShape.style.borderBottom = "100px solid";
-    newShape.style.borderRadius = "0";
+    createSquare(newShape);
   }
-  if(selectedShape==="triangle"){
-    newShape.style.color=selectedColor;
+
+  if (selectedShape === "triangle") {
+     createTriangle(newShape);
+    newShape.style.color = selectedColor;
+  } else {
+    newShape.style.backgroundColor = selectedColor;
   }
-  else{
-  newShape.style.backgroundColor = selectedColor;
-  }
+
   shapeContainer.innerHTML = "";
   shapeContainer.appendChild(newShape);
 });
@@ -37,3 +30,24 @@ generateBtn.addEventListener("click", function () {
 clearBtn.addEventListener("click", function () {
   shapeContainer.innerHTML = "";
 });
+
+function createCircle(element) {
+  element.style.borderRadius = "50%";
+}
+
+function createSquare(element) {
+  element.style.width = "100px";
+  element.style.height = "100px";
+  element.style.borderRadius = "0";
+}
+function createTriangle(element) {
+  element.style.width = "0";
+  element.style.height = "0";
+  element.style.borderLeft = "50px solid transparent";
+  element.style.borderRight = "50px solid transparent";
+  element.style.borderBottom = "100px solid";
+  element.style.borderRadius = "0";
+}
+
+
+
