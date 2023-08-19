@@ -26,15 +26,12 @@ generateBtn.addEventListener("click", function () {
   shapeContainer.innerHTML = "";
   shapeContainer.appendChild(newShape);
 });
-
 clearBtn.addEventListener("click", function () {
   shapeContainer.innerHTML = "";
 });
-
 function createCircle(element) {
   element.style.borderRadius = "50%";
 }
-
 function createSquare(element) {
   element.style.width = "100px";
   element.style.height = "100px";

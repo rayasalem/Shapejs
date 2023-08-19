@@ -10,30 +10,55 @@ body {
   align-items: center;
   min-height: 100vh;
   position: relative;
+  font-family: 'Roboto', sans-serif;
 }
+
 .container {
-  font-size: small;
-  border: 1px solid white;
-  padding: 10px;
+  font-size: 0.875rem;
+  border: 0.0625rem solid white;
+  padding: 0.625rem;
   width: 60vw;
   display: flex;
   background-color: #9a9a9a;
-  border-radius: 30px;
-  gap: 20px;
+  border-radius: 1.875rem;
+  gap: 1.25rem;
 }
+
 .left,
 .right {
   flex: 1;
-  padding: 10px;
+  padding: 0.625rem;
   text-align: center;
+}
+
+.title {
+  margin-bottom: 28.125rem;
+  font-style: italic;
+  color: #3b3b3b;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-3.125rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .select-shape {
   font-size: small;
-  border: 2px solid white;
-  border-radius: 30px;
+  border: 0.125rem solid white;
+  border-radius: 1.875rem;
   width: 30vw;
   height: 25vw;
-  max-width: 400px;
+  max-width: 25rem;
   top: 0;
   background-color: #bbbbbb;
   font-style: italic;
@@ -41,72 +66,67 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:black;
+  color: black;
 }
-.title {
-  margin-bottom: 450px;
-  font-style: italic;
-  color:#3B3B3B;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 100%;
+.select-shape:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
 }
 label {
   font-weight: bolder;
   font-style: italic;
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: #fff;
-  margin-top: 15px;
+  margin-top: 0.9375rem;
 }
 button {
   background-color: gray;
   font-weight: bolder;
   font-style: italic;
-  font-size: larger;
-  margin-left: 20px;
-  margin-top: 30px;
-  width: 150px;
-  height: 30px;
+  font-size: 1.5rem;
+  margin-left: 1.25rem;
+  margin-top: 1.875rem;
+  width: 9.375rem;
+  height: 1.875rem;
   color: #fff;
 }
 button:hover {
   background-color: rgb(182, 109, 139);
+  transform: scale(1.05);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
 }
 select {
   width: 20vw;
   font-size: small;
-  width: 150px;
-  border: 1px solid gray;
-  border-radius: 5px;
+  width: 9.375rem;
+  border: 0.0625rem solid gray;
+  border-radius: 0.3125rem;
   background-color: #fff;
-  margin-bottom: 20px;
-  height: 30px;
+  margin-bottom: 1.25rem;
+  height: 1.875rem;
   font-style: italic;
   font-size: medium;
-  margin-top: 5px;
+  margin-top: 0.3125rem;
 }
 .shape {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
   background-color: transparent;
 }
 .shapeoption {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem) {
   .container {
     width: 90vw;
     flex-direction: column;
   }
   .title {
-    font-size: small;
+    font-size: 0.875rem;
     font-weight: 100;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
-  select{
+  select {
     color: #141414;
   }
 }
