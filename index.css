@@ -105,4 +105,10 @@ select {
     font-weight: 100;
     margin-bottom: 20px;
   }
+  .select-shape{
+    width: 40vw;
+  }
+  select{
+    color: #141414;
+  }
 }
