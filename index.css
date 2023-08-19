@@ -106,9 +106,6 @@ select {
     font-weight: 100;
     margin-bottom: 20px;
   }
-  .select-shape{
-    width: 90vw;
-  }
   select{
     color: #141414;
   }
