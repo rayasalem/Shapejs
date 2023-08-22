@@ -9,30 +9,29 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  position: relative;
   font-family: 'Roboto', sans-serif;
 }
 
 .container {
-  font-size: 0.875rem;
-  border: 0.0625rem solid white;
-  padding: 0.625rem;
+  font-size: 14px;
+  border: 1px solid white;
+  padding: 10px;
   width: 60vw;
   display: flex;
   background-color: #9a9a9a;
-  border-radius: 1.875rem;
-  gap: 1.25rem;
+  border-radius: 30px;
+  gap: 20px;
 }
 
 .left,
 .right {
   flex: 1;
-  padding: 0.625rem;
+  padding: 10px;
   text-align: center;
 }
 
 .title {
-  margin-bottom: 28.125rem;
+  margin-bottom: 450px;
   font-style: italic;
   color: #3b3b3b;
   text-align: center;
@@ -43,10 +42,9 @@ body {
   width: 100%;
   animation: slideIn 1s ease-in-out;
 }
-
 @keyframes slideIn {
   0% {
-    transform: translateY(-3.125rem);
+    transform: translateY(-50px);
   }
   100% {
     transform: translateY(0);
@@ -54,8 +52,8 @@ body {
 }
 .select-shape {
   font-size: small;
-  border: 0.125rem solid white;
-  border-radius: 1.875rem;
+  border: 3px solid white;
+  border-radius: 30px;
   width: 30vw;
   height: 25vw;
   max-width: 25rem;
@@ -70,61 +68,60 @@ body {
 }
 .select-shape:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 label {
   font-weight: bolder;
   font-style: italic;
-  font-size: 1.5625rem;
+  font-size: 25px;
   color: #fff;
-  margin-top: 0.9375rem;
+  margin-top: 15px;
 }
 button {
   background-color: gray;
   font-weight: bolder;
   font-style: italic;
-  font-size: 1.5rem;
-  margin-left: 1.25rem;
-  margin-top: 1.875rem;
-  width: 9.375rem;
-  height: 1.875rem;
+  font-size: 24px;
+  margin-left: 20px;
+  margin-top: 30px;
+  width: 120px;
+  height: 30px;
   color: #fff;
 }
 button:hover {
   background-color: rgb(182, 109, 139);
   transform: scale(1.05);
-  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 select {
-  width: 20vw;
+  width: 150px;
   font-size: small;
-  width: 9.375rem;
-  border: 0.0625rem solid gray;
-  border-radius: 0.3125rem;
+  border: 1px solid gray;
+  border-radius: 5px;
   background-color: #fff;
-  margin-bottom: 1.25rem;
-  height: 1.875rem;
+  margin-bottom: 20px;
+  height: 30px;
   font-style: italic;
   font-size: medium;
-  margin-top: 0.3125rem;
+  margin-top: 5px;
 }
 .shape {
-  width: 6.25rem;
-  height: 6.25rem;
+  width: 100px;
+  height: 100px;
   background-color: transparent;
 }
 .shapeoption {
-  margin-top: 1.25rem;
+  margin-top: 20px;
 }
-@media screen and (max-width: 37.5rem) {
+@media screen and (max-width: 600px) {
   .container {
     width: 90vw;
     flex-direction: column;
   }
   .title {
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 100;
-    margin-bottom: 1.25rem;
+    margin-bottom: 20px;
   }
   select {
     color: #141414;
