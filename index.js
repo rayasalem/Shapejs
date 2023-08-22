@@ -11,7 +11,7 @@ const shapes = {
       element.style.borderRadius = "50%";
     },
     applyColor: (element,colorSelector) => {
-      element.style.backgroundcolor=colorSelector;
+      element.style.backgroundColor=colorSelector;
     }
   },
   square: {
@@ -21,7 +21,7 @@ const shapes = {
       element.style.borderRadius = "0";
     },
     applyColor: (element,colorSelector) => {
-      element.style.backgroundcolor=colorSelector;
+      element.style.backgroundColor=colorSelector;
     }
   },
   triangle: {
@@ -60,6 +60,7 @@ clearBtn.addEventListener("click", function () {
   if (shapeElement.length!=0) {
     return;  
 }
+
 shapeContainer.innerHTML = "";
 
 });
