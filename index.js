@@ -54,10 +54,7 @@ generateBtn.addEventListener("click", function () {
 });
 
 clearBtn.addEventListener("click", function () {
-  const shapeElement = shapeContainer.innerHTML;
-  const text=textContainer.innerHTML;
-  
-  if (shapeElement != textContainer) {
-    shapeContainer.innerHTML = "";
-  }
+
+shapeContainer.innerHTML = "";
+
 });
