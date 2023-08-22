@@ -46,15 +46,20 @@ generateBtn.addEventListener("click", function () {
   const newShape = document.createElement("div");
   newShape.className = "shape";
 
-  shapes[shapeSelector].create(newShape);
-  shapes[shapeSelector].applyColor(newShape, colorSelector);
+  shapes[selectedShape].create(newShape);
+  shapes[selectedShape].applyColor(newShape, selectedColor);
 
   shapeContainer.innerHTML = "";
   shapeContainer.appendChild(newShape);
 });
 
 clearBtn.addEventListener("click", function () {
-
+  const shapeElement = shapeContainer.innerHTML;
+  const text=textContainer.innerHTML;
+  
+  if (shapeElement.length!=0) {
+    return;  
+}
 shapeContainer.innerHTML = "";
 
 });
