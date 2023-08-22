@@ -46,8 +46,8 @@ generateBtn.addEventListener("click", function () {
   const newShape = document.createElement("div");
   newShape.className = "shape";
 
-  shapes[selectedShape].create(newShape);
-  shapes[selectedShape].applyColor(newShape, selectedColor);
+  shapes[shapeSelector].create(newShape);
+  shapes[shapeSelector].applyColor(newShape, selectedColor);
 
   shapeContainer.innerHTML = "";
   shapeContainer.appendChild(newShape);
