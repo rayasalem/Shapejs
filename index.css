@@ -18,9 +18,10 @@ body {
   padding: 10px;
   width: 60vw;
   display: flex;
-  background-color: #9a9a9a;
+  background-color: rgb(255,255, 255,.1);
   border-radius: 30px;
   gap: 20px;
+  overflow: hidden;
 }
 
 .left,
@@ -33,7 +34,7 @@ body {
 .title {
   margin-bottom: 450px;
   font-style: italic;
-  color: #3b3b3b;
+  color:#141414;
   text-align: center;
   position: absolute;
   top: 0;
@@ -58,7 +59,7 @@ body {
   height: 25vw;
   max-width: 25rem;
   top: 0;
-  background-color: #bbbbbb;
+  background-color: #fff;
   font-style: italic;
   font-size: large;
   display: flex;
@@ -74,19 +75,24 @@ label {
   font-weight: bolder;
   font-style: italic;
   font-size: 25px;
-  color: #fff;
+  color: black;
   margin-top: 15px;
 }
+button,
+select {
+  margin-top: 5px;
+  margin-left: 20px; 
+}
 button {
-  background-color: gray;
+  background-color: white;
   font-weight: bolder;
   font-style: italic;
   font-size: 24px;
   margin-left: 20px;
   margin-top: 30px;
-  width: 120px;
+  width: 150px;
   height: 30px;
-  color: #fff;
+  color: black;
 }
 button:hover {
   background-color: rgb(182, 109, 139);
@@ -125,5 +131,8 @@ select {
   }
   select {
     color: #141414;
+  }
+  .select-shape{
+    width: 80%;
   }
 }
