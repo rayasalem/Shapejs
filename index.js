@@ -30,8 +30,13 @@ const shapeCreators = {
 };
 
 const applyColor = (element, selectedColor) => {
-  element.style.backgroundColor = selectedColor;
+  if (element == shape.triangle) {
+    element.style.color = selectedColor;
+  } else {
+    element.style.backgroundColor = selectedColor;
+  }
 };
+
 
 generateBtn.addEventListener("click", () => {
   const selectedShape = shapeSelector.value;
