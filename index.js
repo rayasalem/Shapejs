@@ -3,7 +3,6 @@ const colorSelector = document.getElementById("colorselector");
 const generateBtn = document.getElementById("generateBtn");
 const clearBtn = document.getElementById("clearBtn");
 const shapeContainer = document.getElementById("shapeContainer");
-const textContainer = document.getElementById("text3");
 
 const shape = {
   circle: 'circle',
@@ -11,55 +10,44 @@ const shape = {
   triangle: 'triangle',
 };
 
-const shapes = {
-  [shape.circle]: {
-    create: (element) => {
-      element.style.borderRadius = "50%";
-    },
-    applyColor: (element, colorSelector) => {
-      element.style.backgroundColor = colorSelector;
-    },
+const shapeCreators = {
+  circle: element => {
+    element.style.borderRadius = "50%";
   },
-  [shape.square]: {
-    create: (element) => {
-      element.style.width = "100px";
-      element.style.height = "100px";
-      element.style.borderRadius = "0";
-    },
-    applyColor: (element, colorSelector) => {
-      element.style.backgroundColor = colorSelector;
-    },
+  square: element => {
+    element.style.width = "100px";
+    element.style.height = "100px";
+    element.style.borderRadius = "0";
   },
-  [shape.triangle]: {
-    create: (element) => {
-      element.style.width = "0";
-      element.style.height = "0";
-      element.style.borderLeft = "50px solid transparent";
-      element.style.borderRight = "50px solid transparent";
-      element.style.borderBottom = "100px solid ";
-      element.style.borderRadius = "0";
-    },
-    applyColor: (element, colorSelector) => {
-      element.style.color = colorSelector;
-    },
+  triangle: element => {
+    element.style.width = "0";
+    element.style.height = "0";
+    element.style.borderLeft = "50px solid transparent";
+    element.style.borderRight = "50px solid transparent";
+    element.style.borderBottom = "100px solid ";
+    element.style.borderRadius = "0";
   },
 };
 
-generateBtn.addEventListener("click", function () {
+const applyColor = (element, selectedColor) => {
+  element.style.backgroundColor = selectedColor;
+};
+
+generateBtn.addEventListener("click", () => {
   const selectedShape = shapeSelector.value;
   const selectedColor = colorSelector.value;
 
   const newShape = document.createElement("div");
   newShape.className = "shape";
 
-  shapes[selectedShape].create(newShape);
-  shapes[selectedShape].applyColor(newShape, selectedColor);
+  shapeCreators[selectedShape](newShape);
+  applyColor(newShape, selectedColor);
 
   shapeContainer.innerHTML = "";
   shapeContainer.appendChild(newShape);
 });
 
-clearBtn.addEventListener("click", function () {
+clearBtn.addEventListener("click", () => {
   if (shapeContainer.firstChild.classList.contains("shape")) {
     shapeContainer.innerHTML = "";
   }
