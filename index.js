@@ -11,15 +11,15 @@ const shape = {
 };
 
 const shapeCreators = {
-  circle: element => {
+  [shape.circle]: element => {
     element.style.borderRadius = "50%";
   },
-  square: element => {
+  [shape.square]: element => {
     element.style.width = "100px";
     element.style.height = "100px";
     element.style.borderRadius = "0";
   },
-  triangle: element => {
+  [shape.triangle]: element => {
     element.style.width = "0";
     element.style.height = "0";
     element.style.borderLeft = "50px solid transparent";
