@@ -29,8 +29,8 @@ const shapeCreators = {
   },
 };
 
-const applyColor = (element, selectedColor) => {
-  if (element == shape.triangle) {
+const applyColor = (element, selectedColor, selectedShape) => {
+  if (selectedShape === "triangle") {
     element.style.color = selectedColor;
   } else {
     element.style.backgroundColor = selectedColor;
@@ -46,7 +46,7 @@ generateBtn.addEventListener("click", () => {
   newShape.className = "shape";
 
   shapeCreators[selectedShape](newShape);
-  applyColor(newShape, selectedColor);
+  applyColor(newShape, selectedColor,selectedShape);
 
   shapeContainer.innerHTML = "";
   shapeContainer.appendChild(newShape);
