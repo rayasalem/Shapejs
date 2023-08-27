@@ -3,28 +3,34 @@ const colorSelector = document.getElementById("colorselector");
 const generateBtn = document.getElementById("generateBtn");
 const clearBtn = document.getElementById("clearBtn");
 const shapeContainer = document.getElementById("shapeContainer");
-const textContainer=document.getElementById("text3");
+const textContainer = document.getElementById("text3");
+
+const shape = {
+  circle: 'circle',
+  square: 'square',
+  triangle: 'triangle',
+};
 
 const shapes = {
-  circle: {
+  [shape.circle]: {
     create: (element) => {
       element.style.borderRadius = "50%";
     },
-    applyColor: (element,colorSelector) => {
-      element.style.backgroundColor=colorSelector;
-    }
+    applyColor: (element, colorSelector) => {
+      element.style.backgroundColor = colorSelector;
+    },
   },
-  square: {
+  [shape.square]: {
     create: (element) => {
       element.style.width = "100px";
       element.style.height = "100px";
       element.style.borderRadius = "0";
     },
-    applyColor: (element,colorSelector) => {
-      element.style.backgroundColor=colorSelector;
-    }
+    applyColor: (element, colorSelector) => {
+      element.style.backgroundColor = colorSelector;
+    },
   },
-  triangle: {
+  [shape.triangle]: {
     create: (element) => {
       element.style.width = "0";
       element.style.height = "0";
@@ -33,10 +39,10 @@ const shapes = {
       element.style.borderBottom = "100px solid ";
       element.style.borderRadius = "0";
     },
-    applyColor: (element,colorSelector) => {
-      element.style.color=colorSelector;
-    }
-  }
+    applyColor: (element, colorSelector) => {
+      element.style.color = colorSelector;
+    },
+  },
 };
 
 generateBtn.addEventListener("click", function () {
@@ -45,7 +51,7 @@ generateBtn.addEventListener("click", function () {
 
   const newShape = document.createElement("div");
   newShape.className = "shape";
-  
+
   shapes[selectedShape].create(newShape);
   shapes[selectedShape].applyColor(newShape, selectedColor);
 
@@ -54,8 +60,7 @@ generateBtn.addEventListener("click", function () {
 });
 
 clearBtn.addEventListener("click", function () {
-
- if (shapeContainer.firstChild.classList.contains("shape")) {
+  if (shapeContainer.firstChild.classList.contains("shape")) {
     shapeContainer.innerHTML = "";
   }
 });
