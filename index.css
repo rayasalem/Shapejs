@@ -125,6 +125,7 @@ select {
   .container {
     width: 90vw;
     flex-direction: column;
+    margin-top:40px;
   }
   .title {
     font-size: 14px;
@@ -135,6 +136,19 @@ select {
     color: #141414;
   }
   .select-shape{
-    width: 80%;
+    width: 60%;
+   margin-left: 100px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .container {
+    margin-top:40px;
+    width: 90vw;
+  }
+
+
+  .select-shape{
+    width: 60%;
+   margin-left: 100px;
   }
 }
